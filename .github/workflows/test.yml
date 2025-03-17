@@ -1,0 +1,17 @@
+# run du -sh / in action
+name: Test
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Check disk usage
+      run: sudo du -sh /
+    - name: Check disks
+      run: sudo df -h
+    - name: Check memory
+      run: free -h
+    - name: Check CPU
+      run: lscpu
