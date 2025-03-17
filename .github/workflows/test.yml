@@ -8,7 +8,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Check disk usage
-      run: sudo du -sh /
+      run: sudo du -sh /{var,etc,opt,bin,boot,dev,home,lib,lib64,media,mnt,root,run,sbin,srv,sys,tmp,usr,var}
     - name: Check disks
       run: sudo df -h
     - name: Check memory
